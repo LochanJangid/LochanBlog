@@ -6,7 +6,7 @@ import Link from 'next/link'
 function createMarkup(c) {
   return { __html: c };
 }
-const slug = () => {
+const Slug = () => {
     const router = useRouter()
     const { slug } = router.query
     const [blogs, setBlogs] = useState([]);
@@ -31,4 +31,4 @@ const slug = () => {
   )
 }
 
-export default slug
+export default Slug

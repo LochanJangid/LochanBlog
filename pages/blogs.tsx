@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
-chrome
+
 // Step 1: Collect all data from the blogdata directory
 // Step 2: Iterate through the and Display them
-const blogs = () => {
+const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(()=>{
       console.log("useEffect is running")
@@ -27,7 +27,7 @@ const blogs = () => {
       </div>
       <div className="mb-32 flex  flex-wrap justify-center items-center lg:mb-0 lg:grid-cols-4 lg:text-left">
 {blogs.map((blogitem)=>{
-  return <Link href={`/blogpost/${blogitem.slug}`} className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+  return <div key={blogitem.slug}><Link href={`/blogpost/${blogitem.slug}`} className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
     <h2 className={`mb-3 text-2xl font-semibold`}>
       {blogitem.title}{' '}
       <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
@@ -40,6 +40,7 @@ const blogs = () => {
       {blogitem.content.substr(0, 200)}...
     </p>
   </Link>;
+  </div>
 })}
 </div>
     </main>
@@ -47,4 +48,4 @@ const blogs = () => {
   )
 }
 
-export default blogs
+export default Blogs
