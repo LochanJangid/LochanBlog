@@ -1,14 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
 import * as fs from 'fs';
 
-type Blog = {
-  name: string
-}
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Blog>
-) { 
+export default function handler(req, res) { 
   fs.readFile(`blogdata/${req.query.slug}.json`, 'utf-8', (err, data) => {
     if (err) {
       res.status(404).json({ name: "No Such blog found" })

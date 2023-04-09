@@ -1,17 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
 import * as fs from 'fs';
 
-type Blog = {
-  name: string
-}
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Blog[]>
-) { 
+export default async function handler(req, res) { 
   let data = await fs.promises.readdir("blogdata")
   let myfile;
-  let allBlogs: Blog[] = []
+  let allBlogs = []
     for (let index = 0; index < data.length; index++) {
       const item = data[index];
       myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
