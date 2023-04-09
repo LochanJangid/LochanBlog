@@ -8,7 +8,7 @@ const contact = () => {
         <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
       </Head>
       <div>
-      <div className=" h-[100vh] " aria-hidden="true">
+      <div className=" h-[100vh] bg-black" aria-hidden="true">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
             Contact Me

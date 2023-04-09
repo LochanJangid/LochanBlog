@@ -16,7 +16,7 @@ const Slug = () => {
 
   useEffect(() => {
     if (!router.isReady) return;
-    fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+    fetch(`https://lochanblog.vercel.app//api/getblog?slug=${slug}`)
       .then((a) => {
         return a.json();
       })
