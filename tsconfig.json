@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blogs.js", "pages/contact.js", "pages/index.js", "pages/about.js", "pages/_document.js", "pages/_app.js", "pages/blogpost/[slug].js", "pages/api/getblog.js", "pages/api/blogs.js", "pages/api/index.js", "components/Navbar.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog.js", "pages/contact.js", "pages/index.js", "pages/about.js", "pages/_document.js", "pages/_app.js", "pages/blogpost/[slug].js", "pages/api/getblog.js", "pages/api/blogs.js", "pages/api/index.js", "components/Navbar.js"],
   "exclude": ["node_modules"]
 }

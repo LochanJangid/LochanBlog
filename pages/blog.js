@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
-const BlogList = () => {
+const blog = () => {
     const [blogData, setBlogData] = useState([]);
     useEffect(()=>{
-      fetch('https://lochanblog.vercel.app/api/blogs').then((a)=>{
+      fetch('https://lochanblog.vercel.app/public/api/blogs').then((a)=>{
         return a.json()})
         .then((parsed)=>{
           setBlogData(parsed)
@@ -44,4 +44,4 @@ const BlogList = () => {
   )
 }
 
-export default BlogList;
+export default blog;
