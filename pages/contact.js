@@ -15,7 +15,7 @@ const contact = () => {
           </h2>
         </div>
         <form
-          action="https://script.google.com/macros/s/AKfycbwHJrEfMCzYkSjEDuBpNg0_Vb2wKUL8Vyg8WAHD0bAUU7bvyizCt0bd7XOsWlPE7bA7/exec"
+          action="https://script.google.com/macros/s/AKfycbxXMlRHkcVtd5RKFjk6i7rL3QNtCLTsW72IEQxtKoLT6GkMRgjEnAfrvLTcgEiISt0zrA/exec"
           method="POST"
           className="mx-auto mt-16 max-w-xl sm:mt-20"
         >
