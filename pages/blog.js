@@ -6,7 +6,7 @@ const Blog = () => {
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
-    fetch('https://lochanblog.vercel.app/public/api/blogs')
+    fetch('/api/blogs')
       .then((response) => response.json())
       .then((data) => {
         setBlogData(data);
@@ -30,20 +30,15 @@ const Blog = () => {
           {blogData.map((blogItem) => (
             <div
               key={blogItem.slug}
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+              className="w-80 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             >
               <Link href={`/blogpost/${blogItem.slug}`}>
-                <a>
                   <h2 className="mb-3 text-2xl font-semibold">
-                    {blogItem.title}{' '}
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                      -&gt;
-                    </span>
+                    {blogItem.title}
                   </h2>
-                  <p className="m-0 max-w-[30ch] text-sm opacity-50">
-                    {blogItem.content.substr(0, 200)}...
+                  <p className="m-0 text-sm opacity-50">
+                    {blogItem.description.substr(0, 50)}...
                   </p>
-                </a>
               </Link>
             </div>
           ))}
